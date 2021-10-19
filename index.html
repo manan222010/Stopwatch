@@ -47,25 +47,10 @@ h1, h2, h3 {
   font-size:2em;
 }
 
-button{
-@include corners (5px);
-background:$base-color;
-color:$white;
-border: solid 1px $white;
-text-decoration:none;
-cursor:pointer;
-font-size:1.2em;
-padding:18px 10px;
-width:180px;
-margin: 10px;
- outline: none;
-  &:hover{
-	@include transition;
-	background:$white;
-	border: solid 1px $white;
-	color:$base-color;
+	#button-start{
+	background : linear-gradient(to right, #3f5efb, #fc466b);
+	color : white;
 	}
-}
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One');
 
 * {
