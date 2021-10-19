@@ -66,8 +66,73 @@ margin: 10px;
 	color:$base-color;
 	}
 }
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
 
+* {
+  box-sizing: border-box;
+}
+
+body,html {
+  margin: 0;
+  padding: 0;
+}
+
+.background-header {
+  height: 90vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.background-header h1, span {
+  font-family: 'Fredoka One', cursive;
+  color: #000;
+}
+
+
+
+.btn-grid {
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.btn {
+  height: 90px;
+  border: 2px solid #000;
+  cursor: pointer;
+}
+
+.btn-tomato {
+  width: 100%;
+  background-color: #FF6347;
+}
+.btn-violet {
+  background-color: #EE82EE;
+}
+.btn-wheat {
+  background-color: #F5DEB3;
+}
+.btn-yellow {
+  background-color: #FFFF00;
+}
+.btn-yellowgreen {
+  background-color: #9ACD32;
+}
 </style>
+	<div id="bgHead" class="background-header">
+  <h1>Click button below to change background</h1>
+  <span>and click here again to change to default color</span>
+</div>  
+
+<div class="btn-grid">
+  <div id="btn1" class="btn btn-tomato"></div>
+  <div id="btn2" class="btn btn-violet"></div>
+  <div id="btn3" class="btn btn-wheat"></div>
+  <div id="btn4" class="btn btn-yellow"></div>
+  <div id="btn5" class="btn btn-yellowgreen"></div>
+</div>
 <div class="wrapper">
 <h1>Stopwatch</h1>
 <h2>Vanilla JavaScript Stopwatch</h2>
@@ -139,5 +204,36 @@ window.onload = function () {
   
 
 }
+	let bgHead = document.getElementById('bgHead');
+let btn1 = document.getElementById('btn1');
+let btn2 = document.getElementById('btn2');
+let btn3 = document.getElementById('btn3');
+let btn4 = document.getElementById('btn4');
+let btn5 = document.getElementById('btn5');
+
+
+btn1.addEventListener('click', function() {
+    bgHead.style.backgroundColor = "#FF6347";
+});
+
+btn2.addEventListener('click', function() {
+    bgHead.style.backgroundColor = "#EE82EE";
+});
+
+btn3.addEventListener('click', function() {
+    bgHead.style.backgroundColor = "#F5DEB3";
+});
+
+btn4.addEventListener('click', function() {
+    bgHead.style.backgroundColor = "#FFFF00";
+});
+
+btn5.addEventListener('click', function() {
+    bgHead.style.backgroundColor = "#9ACD32";
+});
+
+bgHead.addEventListener('click', function() {
+    bgHead.style.backgroundColor = "#FFF";
+});
 </script>
 </body>
