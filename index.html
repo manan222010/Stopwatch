@@ -75,6 +75,7 @@ margin: 10px;
 <button id="button-start">Start</button>
 <button id="button-stop">Pause</button>
 <button id="button-reset">Reset</button>
+	<p id="result"></p>
 </div> 
 <script>
 window.onload = function () {
@@ -87,7 +88,8 @@ window.onload = function () {
   var buttonStop = document.getElementById('button-stop');
   var buttonReset = document.getElementById('button-reset');
   var Interval ;
-
+  var result = document.getElementById('result');
+	console.log(result)
   buttonStart.onclick = function() {
     
     clearInterval(Interval);
