@@ -149,7 +149,7 @@ body,html {
   
 		<div class="wrapper">
 <h1>Stopwatch</h1>
-<h2>Vanilla JavaScript Stopwatc</h2>
+
 <p><span id="seconds">00</span>:<span id="tens">00</span></p>
 <button id="button-start">Start</button>
 <button id="button-stop">Pause</button>
@@ -178,7 +178,10 @@ window.onload = function () {
   var buttonReset = document.getElementById('button-reset');
   var Interval ;
   var result = document.getElementById('result');
+  var a = 1;
+	console.log(a);
 	console.log(result)
+	
   buttonStart.onclick = function() {
     
     clearInterval(Interval);
